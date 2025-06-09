@@ -29,13 +29,13 @@ void cadastrarProduto() {
 
 void mostrarProduto() {
     if (produto.quantidade < 0) {
-        printf("Nenhum produto cadastrado ainda.\n\n");
+        printf("Nenhum produto cadastrado ainda.\n");
         return;
     }
     printf("-- Dados do Produto --\n");
     printf("Nome: %s\n", produto.nome);
     printf("Quantidade no estoque: %d\n", produto.quantidade);
-    printf("Preço do produto: R$ %.2f\n\n", produto.preco);
+    printf("Preço do produto: R$ %.2f\n", produto.preco);
 }
 
 void realizarCompra() {
@@ -55,7 +55,7 @@ void realizarCompra() {
         produto.quantidade = produto.quantidade - quantidadeComprada;
         float total = quantidadeComprada * produto.preco;
         printf("Compra realizada com sucesso! Total: R$ %.2f\n", total);
-        printf("Estoque restante: %d\n\n", produto.quantidade);
+        printf("Estoque restante: %d\n", produto.quantidade);
     printf ("\n Enter para continuar");
     getchar (); 
     getchar (); 
